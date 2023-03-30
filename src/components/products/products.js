@@ -7,7 +7,7 @@ const Products = ()=>{
         <div className='container'>
         
             
-            {ProductData.map(({title, price, images, description, rating})=>{
+            {ProductData.map(({title, price, images, description, rating, category})=>{
                 return(
                 <main className="card">
                     <div className='img-container'>
@@ -15,8 +15,9 @@ const Products = ()=>{
                     </div>
                     <div className='text-container'>
                         <h2>{title}</h2>
+                        <h3>{category}</h3>
                         {/* <span>{thumbnail}</span> */}
-                        <span>Price:<h3>${price}</h3></span>
+                        <h3>price: ${price}</h3>
                         <small>{rating}⭐</small>
                         <br/>
                         <p>{description}</p>

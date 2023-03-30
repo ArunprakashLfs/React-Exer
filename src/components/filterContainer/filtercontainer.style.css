@@ -6,9 +6,9 @@
     justify-content: center;
 }
 .filter-container{
-    padding: 1rem 3rem;
-    margin: 1rem;
-    width: 360px;
+    padding: 1rem 2rem;
+    /* margin: 1rem; */
+    width: 464px;
     box-shadow:  0 -3em 3em rgba(43, 40, 40, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     border: none;
@@ -16,6 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap:5px;
+    margin-bottom: 1rem;
 }
 .search-text{
     width: 14rem;
@@ -36,4 +38,12 @@
     color: rgb(231, 86, 33);
     cursor: pointer;
     border: none;
+}
+.searchbar{
+    display: flex;
+    flex-direction: row;
+}
+.category-container{
+    width: 4rem;
+    padding: 1rem;
 }
