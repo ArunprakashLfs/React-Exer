@@ -1,8 +1,9 @@
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    gap: 1rem;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.25rem 1rem;
     /* display: flex;
     flex-direction: column; */
     
@@ -20,8 +21,8 @@ h1{
     justify-content: space-between;
     border-radius: 7px;
     gap: 2rem;
-    box-shadow: 0 -3em 3em rgba(104, 98, 98, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -3em 3em rgba(54, 56, 149, 0.176), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(26, 26, 26, 0.205);
     /* background-color: aquamarine; */
     /* display: flex;
     flex-direction: column;

@@ -1,15 +1,13 @@
 import ProductData from'../productData/productData';
 import '../products/products.css';
-import FilterContainer from '../filterContainer/filterContainer';
+// import FilterContainer from '../filterContainer/filterContainer';
 const Products = ()=>{
     return(
         <>
-        <h1>My Products</h1>
-        <FilterContainer/>
         <div className='container'>
         
             
-            {ProductData.map(({title, price, images, description})=>{
+            {ProductData.map(({title, price, images, description, rating})=>{
                 return(
                 <main className="card">
                     <div className='img-container'>
@@ -19,6 +17,8 @@ const Products = ()=>{
                         <h2>{title}</h2>
                         {/* <span>{thumbnail}</span> */}
                         <span>Price:<h3>${price}</h3></span>
+                        <small>{rating}⭐</small>
+                        <br/>
                         <p>{description}</p>
                     </div>
                 </main>

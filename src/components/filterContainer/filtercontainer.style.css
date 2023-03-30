@@ -29,8 +29,11 @@
 .search-icon{
     /* background-color: aquamarine; */
     padding: 3px;
+    cursor: pointer;
+    border: none;
 }
 .sort-icon{
     color: rgb(231, 86, 33);
     cursor: pointer;
+    border: none;
 }
