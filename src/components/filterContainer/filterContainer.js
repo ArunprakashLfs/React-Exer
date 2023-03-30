@@ -1,16 +1,20 @@
+import { useState } from 'react';
 import './filtercontainer.style.css';
 // import {faSearch} from 'react-icons/fa';
 
 
-const FilterContainer = (sortValue, searchFilter, catogaryFilter)=>{
+const FilterContainer = ({sortValue, searchFilter, catogaryFilter})=>{
+    const [searchInput, setSearchInput] = useState('');
    
     return(
         <>
-        <div className='search-container'>
-            <div className='filter-container'>
-                <form className='searchbar'>
-                    <input className='search-text'></input>
-                    <button className='search-icon' value='submit' onChange={searchFilter}><i class="fa-solid fa-magnifying-glass" ></i></button>
+        <div className ='search-container'>
+            <div className ='filter-container'>
+                <form className ='searchbar' onSubmit={searchFilter}>
+                    <input className ='search-text' type='text' placeholder='enteritem' value={searchInput} onChange={(e)=>{
+                        setSearchInput(e.target.value)
+                    }}></input>
+                    <button className ='search-icon' value='submit'  type='submit'><i class="fa-solid fa-magnifying-glass" ></i></button>
                 </form>
                 <select className='catagory-container' onChange={catogaryFilter}>
                     <option>select</option>

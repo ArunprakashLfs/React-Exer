@@ -8,7 +8,7 @@ const Products = ({ productData }) => {
         <>
         <div className='container'>
             {/* console.log(productData); */}
-            {productData.map((val)=>{
+            {productData = productData.map((val)=>{
                 return(
                 <main className="card">
                     <div className='img-container'>
@@ -27,6 +27,7 @@ const Products = ({ productData }) => {
             )
         })}
         </div>
+        return(productData)
         </>
         
     )

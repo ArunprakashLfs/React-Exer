@@ -3,16 +3,17 @@ import './App.css';
 import { useState } from 'react';
 import Products from './components/products/products';
 import FilterContainer from './components/filterContainer/filterContainer';
-import productData from './components/productData/productData';
+import Data from './components/productData/productData';
 // import ProductData from './components/productData/productData';
 
  
 function App() {
   // let productData = [...ProductData]
-  let [products,setproducts] = useState(productData);
+  let [productData,setproductData] = useState(Data);
   let [isasending, setisasending] = useState(false);
  
   function sortValue(){
+    setisasending(!isasending);
     let copyData = [...productData];
     copyData.sort((val1, val2)=>{
       if(!isasending){
@@ -25,14 +26,19 @@ function App() {
         )
       }
     });
-    isasending = setisasending;
-    productData =setisasending;
+    setproductData(copyData);
+    // productData =setisasending;
   }
-  
+  const searchFilter = (event, searchstring) =>{
+    event.preventDefault();
+    let copyData =[...productData];
+    const filteredProducts = copyData.filter((product)=> product.title.toLowerCase().includes(searchstring));
+    console.log(filteredProducts);
+  }
   return (
     <>
     <h1>My Products</h1>
-    <FilterContainer  sortValue={sortValue}/>
+    <FilterContainer  sortValue={sortValue} searchFilter ={searchFilter} />
     <Products  productData={productData}/>
     </>
   );
