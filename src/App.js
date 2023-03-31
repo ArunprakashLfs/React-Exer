@@ -10,13 +10,13 @@ import Data from './components/productData/productData';
 function App() {
   // let productData = [...ProductData]
   let [productData,setproductData] = useState(Data);
-  let [isasending, setisasending] = useState(false);
+  let [isasending, setisasending] = useState(true);
  
   function sortValue(){
     setisasending(!isasending);
     let copyData = [...productData];
     copyData.sort((val1, val2)=>{
-      if(!isasending){
+      if(isasending){
         return(
           val1.price- val2.price
         ) 
